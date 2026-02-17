@@ -6,13 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Student extends Model
 {
-    // Optional: specify table name if not "students"
-    // protected $table = 'students';
+    protected $fillable = ['name','email','age'];
 
-    // Mass-assignable fields
-    protected $fillable = [
-        'name',
-        'email',
-        'age',
-    ];
+    public function courses() {
+        return $this->belongsToMany(Course::class);
+    }
 }
