@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\ProductController;
+
+Route::resource('products', ProductController::class);
+
 
 // Root URL → show students list
 // Route::get('/', [StudentController::class, 'index']);
