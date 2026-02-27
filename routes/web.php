@@ -37,6 +37,10 @@ use App\Http\Controllers\TeacherController;
 Route::get('/teachers', [TeacherController::class, 'index']);
 Route::resource('students', StudentController::class);
 Route::resource('courses', CourseController::class);
+Route::resource('posts', PostController::class);
+use App\Http\Controllers\PostController;
+
+// Route::resource('posts', PostController::class);
 
 
 
